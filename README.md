@@ -1,16 +1,11 @@
 raspKaku
 ========
 
-Control your KAKU with Raspberry
+Control your KlikAanKlikUit (KaKu) with Raspberry.
+
+These files make it possible to turn on and off lights that are connected thru KaKu. 
+
+This requires a 433 mhz transmitter to use the NEW kaku (system). 
+Aswell this code holds allows you to send the address and unit .
 
 
-=======================================================================================================================
-
-These files make it possible that if you follow the tutorial that is on tweak blog about turning on and off lights 
-with 433 mhz to use the new kaku (system). And I also added the possibility to send the adress instead of hardcoded.
-
-Leave a comment i you change or add shizzle
-
-:)
-
-good luck, have fun

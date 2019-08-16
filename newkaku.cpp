@@ -11,7 +11,7 @@ using namespace std;
 
 int main(int argc, char **argv) 
 {
-    int pin_out = 15; // Pin out using wiringPi pin numbering scheme (15 = TxD / BCM GPIO 14, see https://projects.drogon.net/raspberry-pi/wiringpi/pins/)
+    int pin_out = 15; // Pin out using wiringPi pin numbering scheme (15 = TxD / BCM GPIO 14, see https://pinout.xyz/pinout/)
     int device = 0;
     int address = 0;
     bool state = false;
@@ -22,7 +22,7 @@ int main(int argc, char **argv)
     	std::cout << "example: " << argv[0] << " M 10 on" << std::endl;
 	    return 0;
     } else {
-            std::cout << "adress1" << argv[1] << " test " << std::endl;
+            std::cout << "address " << argv[1] << "  " << std::endl;
 	    address = atol(argv[1]);
 	    device = atol(argv[2]);
 	    string statestr = argv[3];
@@ -46,7 +46,7 @@ int main(int argc, char **argv)
 	digitalWrite(pin_out, LOW);
 //	KaKuSwitch kaKuSwitch(pin_out);
 //	kaKuSwitch.sendSignal(address, device, state);
-std::cout << "address= " << address << " device= " << device << std::endl;
+std::cout << "address = " << address << " unit = " << device << std::endl;
 NewRemoteTransmitter transmitter(address, 15, 260, 3);
 transmitter.setAddress(address);
 transmitter.sendUnit(device, state);
